@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,500;1,700');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(330deg, #F2F597, #37B5B6);
+}
+
+section {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .sign-in {
+    position: absolute;
+    width: 400px;
+    background: rgba(0, 255, 255, 0.2);
+    background-image:
+        linear-gradient(to left, #F2F597 1px, transparent 2px),
+        linear-gradient(to top, #F2F597 1px, transparent 2px);
+    background-position: center;
+    background-size: 34px 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 4px 6px 2px rgba(0, 0, 0, 0.3);
+}
+
+section .sign-in .content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+section .sign-in .content h2 {
+    color: slateblue;
+    text-transform: uppercase;
+}
+
+section .sign-in .content .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+section .sign-in .content .form .inputBox {
+    position: relative;
+    width: 100%;
+}
+
+section .sign-in .content .form .inputBox input {
+    position: relative;
+    width: 100%;
+    border: none;
+    outline: none;
+    margin-bottom: 7px;
+    padding: 25px 10px 7.5px;
+    font-weight: 500;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(6px);
+    border-radius: 12px;
+    box-shadow:
+        inset 1px 2px 1px rgba(0, 0, 0, 0.2),
+        inset -1px -2px 2px rgba(0, 0, 0, 0.4);
+
+
+}
+
+section .sign-in .content .form .inputBox i {
+    position: absolute;
+    left: 0;
+    padding: 15px 10px;
+    font-style: normal;
+    color: rgba(105, 90, 205, 0.911);
+    transition: 0.6s;
+    pointer-events: none;
+}
+
+section .sign-in .content .form .inputBox input:focus~.i1 {
+    transform: translateY(-225px);
+    font-size: 4rem;
+}
+
+section .sign-in .content .form .inputBox input:focus~.i2 {
+    transform: translateY(-300px);
+    font-size: 4rem;
+}
+
+section .sign-in .content .form .inputBox input:valid~i {
+    display: 0.8rem;
+    transform: translateY(-12px);
+}
+
+section .sign-in .content .form .links {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+section .content .form .inputBox input[type="submit"] {
+    padding: 10px;
+    background: rgba(105, 90, 205, 0.564);
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 0.05rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: 1.6s;
+    backdrop-filter: blur(4px);
+}
+
+.links .a-password {
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-top: 8px;
+    background: rgba(55, 181, 182, 0.2);
+    padding: 2px 4px;
+    backdrop-filter: blur(4px);
+}
+
+.links .a-sign-up {
+    color: rgba(246, 74, 108, 0.829);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.4s;
+    margin-top: 10px;
+    background: rgba(55, 181, 182, 0.1);
+    padding: 2px 4px;
+    backdrop-filter: blur(4px);
+
+}
+
+.links .a-sign-up:hover {
+    text-decoration: underline;
+    letter-spacing: 0.025rem;
+
+}
+
+.links .a-password:hover {
+    text-decoration: underline;
+    letter-spacing: 0.025rem;
+}
+
+section .content .form .inputBox input[type="submit"]:hover {
+    background: rgba(105, 90, 205, 0.899);
+    backdrop-filter: blur(4px);
+
+}

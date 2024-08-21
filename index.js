@@ -15,10 +15,8 @@ app.use(express.static("public"));
 function accessCheck(req, res, next) {
     if (req.body["password"] === "Ramification") {
         userIsAuthorised = true;
-        console.log('Access granted:', req.body);
     } else {
         userIsAuthorised = false;
-        console.log('Access denied:', req.body);
     }
     next();
 }
@@ -31,11 +29,15 @@ app.get('/', (req, res) => {
 
 app.post('/check', (req, res) => {
     if (userIsAuthorised) {
+        console.log('Access granted:', req.body);
         res.send("Access granted! ♤");
-    } else res.redirect("/");
+    } else{
+        console.log('Access denied:', req.body);
+        res.redirect("/");
+    }
 })
-
 
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}.`)
 })
+

@@ -125,6 +125,11 @@ section .content .form .inputBox input[type="submit"] {
   backdrop-filter: blur(4px);
 }
 
+section .content .form .inputBox input[type="submit"]:hover {
+  background: rgba(105, 90, 205, 0.899);
+  backdrop-filter: blur(4px);
+}
+
 .links .a-password {
   color: #fff;
   font-weight: 600;
@@ -155,9 +160,4 @@ section .content .form .inputBox input[type="submit"] {
 .links .a-password:hover {
   text-decoration: underline;
   letter-spacing: 0.025rem;
-}
-
-section .content .form .inputBox input[type="submit"]:hover {
-  background: rgba(105, 90, 205, 0.899);
-  backdrop-filter: blur(4px);
 }

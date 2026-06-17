@@ -1,40 +1,50 @@
 # Form Data
-
-This is an illustrative example of how to handle form data using body-parser and express in Node.js. 
-The example is a simple web server that listens for POST requests with form data and logs it to the console.
-
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![Version](https://img.shields.io/badge/version-1.0.3-orange)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Version](https://img.shields.io/badge/version-1.0.0-orange)
 
-## Installation
+A web application to showcase form-handling and password-based access control. It serves a public webpage where users can enter a password, listens for POST requests, and logs them to the console. If the correct password is submitted, the user is granted access. Otherwise, they are redirected back to the home page.
+
+The application works with a serving file that serves static files from the `public` folder and uses the third-party middleware `body-parser` to handle form data, custom middleware `accessCheck` to validate the password in a simplified access control logic (grant or deny).
+
+## Visuals
+
+![Screenshot](assets/form.png)
+
+## Installation and Usage
 
 Remember that for the code to work, you need to have Node.js and npm installed on your machine.
 
-1. Clone the repository:
+Get the repository and install the dependencies
+
    ```bash
-   git clone https://github.com/tpreisig/form-data.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd form-data
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
+➡️ git clone https://github.com/tpreisig/form-data.git
+➡️️ cd form-data
+➡️ npm install
    ```
 
-## Usage
+Dependencies and devDependencies
 
-To start the project, run:
 ```bash
-npm start
+  "dependencies": {
+    "body-parser": "^1.20.5",
+    "express": "^4.22.2"},
+  "devDependencies": {
+    "nodemon": "^3.1.14"}
 ```
-The application will be available at `http://localhost:3500`.
 
+Run the serving file
+
+```bash
+➡️  npm run start 
+
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"},
+```
+
+The application will be available at `http://localhost:3500`.\
 The password for any user is 'Ramification'.  
 Details can be found here: https://github.com/tpreisig/form-data/blob/main/index.js
-
 or here:
 
 ```bash
@@ -52,10 +62,6 @@ function accessCheck(req, res, next) {
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-
-## Screenshots
-
-![Screenshot](screenshots/bonbonetti.png)
 
 ## Contact
 

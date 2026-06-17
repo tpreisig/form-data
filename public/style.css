@@ -12,7 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(330deg, #f2f597, #37b5b6);
+  background: linear-gradient(25deg, slateblue, springgreen);
 }
 
 section {
@@ -26,16 +26,17 @@ section .sign-in {
   position: absolute;
   width: 400px;
   background: rgba(0, 255, 255, 0.2);
-  background-image: linear-gradient(to left, #f2f597 1px, transparent 2px),
-    linear-gradient(to top, #f2f597 1px, transparent 2px);
+  background-image: linear-gradient(to left, rgba(242, 245, 151, 0.8) 1px, transparent 2px),
+    linear-gradient(to top, rgba(242, 245,151, 0.8) 1px, transparent 2px);
   background-position: center;
-  background-size: 34px 34px;
+  background-size: 32px 32px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 4px 6px 2px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(242, 245, 151, 0.8);
+  box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 section .sign-in .content {
@@ -51,6 +52,8 @@ section .sign-in .content {
 section .sign-in .content h2 {
   color: slateblue;
   text-transform: uppercase;
+  font-size: 3rem;
+  text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
 }
 
 section .sign-in .content .form {
@@ -67,6 +70,7 @@ section .sign-in .content .form .inputBox {
 
 section .sign-in .content .form .inputBox input {
   position: relative;
+  color: white;
   width: 100%;
   border: none;
   outline: none;
@@ -74,11 +78,11 @@ section .sign-in .content .form .inputBox input {
   padding: 25px 10px 7.5px;
   font-weight: 500;
   font-size: 1rem;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(6px);
   border-radius: 12px;
-  box-shadow: inset 1px 2px 1px rgba(0, 0, 0, 0.2),
-    inset -1px -2px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 1px 2px 1px rgba(255, 255, 255, 0.4),
+    inset -1px -2px 2px rgba(0, 0, 0, 0.2);
 }
 
 section .sign-in .content .form .inputBox i {
@@ -86,18 +90,18 @@ section .sign-in .content .form .inputBox i {
   left: 0;
   padding: 15px 10px;
   font-style: normal;
-  color: rgba(105, 90, 205, 0.911);
+  color: aqua;
   transition: 0.6s;
   pointer-events: none;
 }
 
 section .sign-in .content .form .inputBox input:focus ~ .i1 {
-  transform: translateY(-225px);
+  transform: translateY(-240px);
   font-size: 4rem;
 }
 
 section .sign-in .content .form .inputBox input:focus ~ .i2 {
-  transform: translateY(-300px);
+  transform: translateY(-320px);
   font-size: 4rem;
 }
 
@@ -142,7 +146,7 @@ section .content .form .inputBox input[type="submit"]:hover {
 }
 
 .links .a-sign-up {
-  color: rgba(246, 74, 108, 0.829);
+  color: aqua;
   text-decoration: none;
   font-weight: 600;
   transition: 0.4s;

@@ -30,14 +30,14 @@ app.get('/', (req, res) => {
 app.post('/check', (req, res) => {
     if (userIsAuthorised) {
         console.log('Access granted:', req.body);
-        res.send("Access granted! ♤");
-    } else{
+        res.send("Access granted! 🫆");
+    } else {
         console.log('Access denied:', req.body);
         res.redirect("/");
     }
 })
 
 app.listen(PORT, () => {
-    console.log(`App listening on port ${PORT}.`)
+    console.log(`App is running on http://localhost:${PORT}.`)
 })
 

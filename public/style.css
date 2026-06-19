@@ -165,3 +165,10 @@ section .content .form .inputBox input[type="submit"]:hover {
   text-decoration: underline;
   letter-spacing: 0.025rem;
 }
+.not-found{
+  font-size: 3.0rem;
+  color: rgba(105, 90, 205, 0.899);
+  text-align: center;
+  transform: translateY(-30%);
+  text-shadow: 1px 1px 1px rgb(255,255,255,0.9);
+}

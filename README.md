@@ -26,7 +26,6 @@ Dependencies and devDependencies
 
 ```bash
   "dependencies": {
-    "body-parser": "^1.20.5",
     "express": "^4.22.2"},
   "devDependencies": {
     "nodemon": "^3.1.14"}

@@ -1,6 +1,8 @@
 import express from "express";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
+import logEvents from "./logEvents.js";
+import EventEmitter from "events";
 
 
 
@@ -11,6 +13,11 @@ const PORT = process.env.PORT_ASSIGNMENT || 3500;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(accessCheck);
+
+class UserInput extends EventEmitter { };
+const userInput = new UserInput();
+
+userInput.on('submit', (msg) => logEvents(msg, 'loginData.txt'));
 
 var userIsAuthorised;
 
@@ -23,24 +30,16 @@ function accessCheck(req, res, next) {
     next();
 }
 
-// localStorage is browser-specific and therefore cannot be used in a node project
-// let's log some data to a file
-
-const userInput = [];
-
-
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/index.html');
 })
 
 app.post('/check', (req, res) => {
     if (userIsAuthorised) {
-        userInput.push({ result: 'Access granted', username: req.body['username'], password: req.body['password'] });
-        console.log(userInput);
         res.send("Access granted! 🫆");
+        userInput.emit('submit', 'login attempt: ' + JSON.stringify({ result: 'Access granted', username: req.body['username'], password: req.body['password'] }));
     } else {
-        userInput.push({ result: 'Access denied', username: req.body['username'], password: req.body['password'] });
-        console.log(userInput);
+        userInput.emit('submit', 'login attempt: ' + JSON.stringify({ result: 'Access denied', username: req.body['username'], password: req.body['password'] }));
         res.redirect("/");
     }
 })

@@ -4,7 +4,7 @@
 
 A web application to showcase form-handling and password-based access control. It serves a public webpage where users can enter a password, listens for POST requests, and logs them to the console. If the correct password is submitted, the user is granted access. Otherwise, they are redirected back to the home page.
 
-The application works with a serving file that serves static files from the `public` folder and uses the third-party middleware `body-parser` to handle form data, custom middleware `accessCheck` to validate the password in a simplified access control logic (grant or deny).
+The application works with a serving file that serves static files from the `public` folder and uses the Express.js built-in middleware `body-parser` to handle form data, custom middleware `accessCheck` to validate the password in a simplified access control logic (grant or deny).
 
 ## Visuals
 
